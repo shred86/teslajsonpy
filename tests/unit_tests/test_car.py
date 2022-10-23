@@ -192,6 +192,22 @@ async def test_car_properties(monkeypatch):
         "sentry_mode_available"
     )
 
+    assert _car.tpms_pressure_fl == VEHICLE_DATA["vehicle_state"].get(
+        "tpms_pressure_fl"
+    )
+
+    assert _car.tpms_pressure_fr == VEHICLE_DATA["vehicle_state"].get(
+        "tpms_pressure_fr"
+    )
+
+    assert _car.tpms_pressure_rl == VEHICLE_DATA["vehicle_state"].get(
+        "tpms_pressure_rl"
+    )
+
+    assert _car.tpms_pressure_rr == VEHICLE_DATA["vehicle_state"].get(
+        "tpms_pressure_rr"
+    )
+
     assert _car.shift_state == VEHICLE_DATA["drive_state"]["shift_state"]
 
     assert _car.speed == VEHICLE_DATA["drive_state"]["speed"]

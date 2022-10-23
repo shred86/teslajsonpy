@@ -463,6 +463,26 @@ class TeslaCar:
         return self._vehicle_data.get("climate_state", {}).get("steering_wheel_heater")
 
     @property
+    def tpms_pressure_fl(self) -> float:
+        """Return tire pressure sensor for front left tire."""
+        return self._vehicle_data.get("vehicle_state", {}).get("tpms_pressure_fl")
+
+    @property
+    def tpms_pressure_fr(self) -> float:
+        """Return tire pressure sensor for front right tire."""
+        return self._vehicle_data.get("vehicle_state", {}).get("tpms_pressure_fr")
+
+    @property
+    def tpms_pressure_rl(self) -> float:
+        """Return tire pressure sensor for rear left tire."""
+        return self._vehicle_data.get("vehicle_state", {}).get("tpms_pressure_rl")
+
+    @property
+    def tpms_pressure_rr(self) -> float:
+        """Return tire pressure sensor for rear right tire."""
+        return self._vehicle_data.get("vehicle_state", {}).get("tpms_pressure_rr")
+
+    @property
     def third_row_seats(self) -> str:
         """Return third row seats option.
 
